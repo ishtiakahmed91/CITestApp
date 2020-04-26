@@ -11,8 +11,8 @@ jobs:
     - name: Force Xcode 11
       run: sudo xcode-select -switch /Applications/Xcode_11.3.app
 
-    - name: Run tests
-      run: xcodebuild clean test -project "CITestApp.xcodeproj" -scheme "CITestApp" -destination "platform=iOS Simulator,name=iPhone 8,OS=13.3"
+    # - name: Run tests
+    #  run: xcodebuild clean test -project "CITestApp.xcodeproj" -scheme "CITestApp" -destination "platform=iOS Simulator,name=iPhone 8,OS=13.3"
 
     - name: Build App
       run: xcodebuild -project "CITestApp.xcodeproj" -scheme "CITestApp" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
